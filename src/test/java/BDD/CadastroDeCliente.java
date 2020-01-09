@@ -7,8 +7,7 @@ import io.cucumber.java.pt.Quando;
 public class CadastroDeCliente {
 	@Dado("que estou na pagina inicial")
 	public void que_estou_na_pagina_inicial() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
 	}
 
 	@Quando("eu clicar no botao USER")
