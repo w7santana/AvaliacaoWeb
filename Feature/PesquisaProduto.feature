@@ -1,15 +1,22 @@
-# language: pt
+#language: pt
 Funcionalidade: Busca de produto pela lupa
 	
 	COMO um cliente
 	EU quero digitar nome de um produto na barra de pesquisa
 	PARA que eu possa filtrar produtos pelo nome
 
-Cenário:  Buscar produto com sucesso
-
-	Dado que estou na pagina "inicial http://advantageonlineshopping.com/"
+Cenario:  Buscar produto com sucesso
+	Dado que estou na pagina ""
 	Quando eu clicar no botao lupa
-	Quando preencher o campo pesquisa com o nome do <produto_desejado>
-	Quando pressionar a tecla enter 
-	Quando clicar no produto
-	Então	deve ser exibida a página de descrição do produto
+	E preencher o campo pesquisa com o nome do "<produto_desejado>"
+	E pressionar a tecla enter 
+	E clicar no produto
+	Então será exibida a página de descrição do produto
+	
+Cenário: Buscar produto inexistente
+	Dado que estou na página ""
+	Quando eu clicar no botão lupa
+	E preencher o campo pesquisa com o nome de um "produto_inexistente"
+	E pressionar a tecla enter
+	Então será exibida uma mensagem dizendo que o produto não foi encontrado
+	
