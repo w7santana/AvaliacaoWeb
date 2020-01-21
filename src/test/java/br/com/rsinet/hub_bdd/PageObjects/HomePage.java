@@ -1,8 +1,9 @@
 package br.com.rsinet.hub_bdd.PageObjects;
 
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -14,12 +15,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 
 public class HomePage {
-	 WebDriver navegador;
+	final WebDriver navegador;
 
 	public HomePage(WebDriver navegador) {
-//		this.navegador = navegador;
+		this.navegador = navegador;
 		PageFactory.initElements(navegador, this);
 	}
 	
@@ -31,8 +33,8 @@ public class HomePage {
 	@FindBy(how = How.ID, using = "scroller_type_4") private WebElement chkTouchScroll;
 	@FindBy(how = How.ID, using = "productsColors3683D1") private WebElement chkCorAzul;
 	@FindBy(how = How.XPATH, using = "/html/body/div[3]/nav/a[3]") private WebElement lblProduto;
-	@FindBy(how = How.CLASS_NAME, using = "cell categoryRight") private WebElement produtoEncontrado;
-	@FindBy(how = How.ID, using = "menuSearch") private WebElement btnLupa;
+	@FindBy(how = How.CLASS_NAME, using = "top6Products") private WebElement produtoEncontrado;
+	@FindBy(how = How.ID, using = "menuSearch") public WebElement btnLupa;
 	@FindBy(how = How.ID, using = "autoComplete") private WebElement campoBusca;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"Description\"]/h1")	private WebElement descProduto;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"menuUserLink\"]/span") private WebElement lblUsuarioLogado;
@@ -66,11 +68,13 @@ public class HomePage {
 	}
 	
 	public void clicaBtnLupa() {
+		WebDriverWait wait = new WebDriverWait(navegador, 10);
+		wait.until(ExpectedConditions.visibilityOf(btnLupa));
 		btnLupa.click();
 	}
 	
 	public void escreveNoCampoBusca(String buscarTxt) {
-		campoBusca.sendKeys(buscarTxt);
+		campoBusca.sendKeys(buscarTxt, Keys.ENTER);
 	}
 	
 	public void selecionaDescProduto() {
@@ -83,8 +87,12 @@ public class HomePage {
 		return descProduto.getText();		
 	}
 	
-	public void clicaNoProdutoEncontrado() {
-		produtoEncontrado.findElement(By.xpath("//*[@id=\"31\"]")).click();
+	public void clicaNoProdutoEncontrado(String categoria) {
+		WebDriverWait wait = new WebDriverWait(navegador, 10);
+		WebElement produtoBuscado = produtoEncontrado.findElement(By.xpath("//*[. ='" + categoria + "']"));
+		wait.until(ExpectedConditions.visibilityOf(produtoBuscado));
+		JavascriptExecutor ex = (JavascriptExecutor) navegador;
+		ex.executeScript("arguments[0].click();", produtoBuscado);
 	}
 	
 	public String getLblProduto() {
@@ -92,9 +100,8 @@ public class HomePage {
 	}
 	
 	public String getUsuarioLogado() {
-		@SuppressWarnings("deprecation")
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(navegador).withTimeout(10, TimeUnit.SECONDS)
-				.pollingEvery(1, TimeUnit.SECONDS).ignoring(NoSuchElementException.class)
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(navegador).withTimeout(Duration.ofSeconds(10))
+				.pollingEvery(Duration.ofSeconds(1)).ignoring(NoSuchElementException.class)
 				.ignoring(StaleElementReferenceException.class);
 
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"menuUserLink\"]/span"))).getText();		
