@@ -7,11 +7,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
-
-	public LoginPage(WebDriver navegador) {
+public class LoginPage extends BasePage {
+	
+public LoginPage(WebDriver navegador) {
+		super(navegador);
 		PageFactory.initElements(navegador, this);
 	}
+
 
 	@FindBy(how = How.LINK_TEXT, using = "CREATE NEW ACCOUNT")
 	private WebElement lnkCreateAccount;

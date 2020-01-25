@@ -1,4 +1,4 @@
-package br.com.rsinet.HUB_TDD.utility;
+package br.com.rsinet.hub_bdd.utility;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,16 +15,16 @@ public class Driver {
 		return navegador;
 	}
 	
-	private static WebDriver createDriver() {
+	public static WebDriver createDriver() {
 		System.setProperty("webdriver.chrome.driver", ".\\drivers\\chromedriver.exe");
 		navegador = new ChromeDriver();
 		navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		navegador.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 		navegador.manage().window().maximize();
-		navegador.get("http://advantageonlineshopping.com/#/");
 		return navegador;
 	}
 	
-	public static void killDriver() {
+	public static void killDriver(WebDriver navegador) {
 		if(navegador != null) {
 			navegador.quit();
 			navegador = null;

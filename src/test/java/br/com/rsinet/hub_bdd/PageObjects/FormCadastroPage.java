@@ -1,112 +1,98 @@
 package br.com.rsinet.hub_bdd.PageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
-import java.time.Duration;
 
-public class FormCadastroPage {
-	WebDriver navegador;
-
-	public FormCadastroPage(WebDriver navegador) {
-//			this.navegador = navegador;
-			PageFactory.initElements(navegador, this);
+public class FormCadastroPage extends BasePage{
+	
+public FormCadastroPage(WebDriver navegador) {
+		super(navegador);
+		PageFactory.initElements(navegador, this);
 	}
 
-	@FindBy(how = How.NAME, using = "usernameRegisterPage") private WebElement fldUserName;
+	@FindBy(how = How.NAME, using = "usernameRegisterPage") @CacheLookup private WebElement fldUserName;
+	@FindBy(how = How.NAME, using = "emailRegisterPage") @CacheLookup private WebElement fldEmail;
+	@FindBy(how = How.NAME, using = "passwordRegisterPage") @CacheLookup private WebElement fldPassword;
+	@FindBy(how = How.NAME, using = "confirm_passwordRegisterPage") @CacheLookup private WebElement fldPasswordConfirm;
+	@FindBy(how = How.NAME, using = "first_nameRegisterPage") @CacheLookup private WebElement fldFirstName;
+	@FindBy(how = How.NAME, using = "last_nameRegisterPage") @CacheLookup private WebElement fldLastName;
+	@FindBy(how = How.NAME, using = "phone_numberRegisterPage") @CacheLookup private WebElement fldPhone;
+	@FindBy(how = How.NAME, using = "countryListboxRegisterPage") @CacheLookup private WebElement cmbCountry;
+	@FindBy(how = How.NAME, using = "cityRegisterPage") @CacheLookup private WebElement fldCity;
+	@FindBy(how = How.NAME, using = "addressRegisterPage") @CacheLookup private WebElement fldAddress;
+	@FindBy(how = How.NAME, using = "state_/_province_/_regionRegisterPage") @CacheLookup private WebElement fldState;
+	@FindBy(how = How.NAME, using = "postal_codeRegisterPage") @CacheLookup private WebElement fldPostalCode;
+	@FindBy(how = How.NAME, using = "i_agree") @CacheLookup private WebElement chkIAgree;
+	@FindBy(how = How.ID, using = "register_btnundefined") @CacheLookup private WebElement btnRegister;
+	@FindBy(how = How.XPATH, using = "//*[@id=\"registerPage\"]/article/sec-form/div[2]/label[1]") @CacheLookup private WebElement lblUsuarioJaExiste;
+	
 	public void digitaUserName(String username) {
 		fldUserName.sendKeys(username);
 	}
 	
-	@FindBy(how = How.NAME, using = "emailRegisterPage") private WebElement fldEmail;
 	public void digitaEmail(String email) {
-		fldUserName.sendKeys(email);
+		fldEmail.sendKeys(email);
 	}
 	
-	@FindBy(how = How.NAME, using = "passwordRegisterPage") private WebElement fldPassword;
 	public void digitaPassword(String password) {
-		fldUserName.sendKeys(password);
+		fldPassword.sendKeys(password);
 	}
 	
-	@FindBy(how = How.NAME, using = "confirm_passwordRegisterPage") private WebElement fldPasswordConfirm;
 	public void digitaConfirmPassword(String confirmPassword) {
-		fldUserName.sendKeys(confirmPassword);
+		fldPasswordConfirm.sendKeys(confirmPassword);
 	}
 	
-	@FindBy(how = How.NAME, using = "first_nameRegisterPage") private WebElement fldFirstName;
 	public void digitaFirstName(String firstName) {
-		fldUserName.sendKeys(firstName);
+		fldFirstName.sendKeys(firstName);
 	}
 	
-	@FindBy(how = How.NAME, using = "last_nameRegisterPage") private WebElement fldLastName;
 	public void digitaLastName(String lastName) {
-		fldUserName.sendKeys(lastName);
+		fldLastName.sendKeys(lastName);
 	}
 	
-	@FindBy(how = How.NAME, using = "phone_numberRegisterPage") private WebElement fldPhone;
 	public void digitaPhone(String phone) {
-		fldUserName.sendKeys(phone);
+		fldPhone.sendKeys(phone);
 	}
 	
-	@FindBy(how = How.NAME, using = "countryListboxRegisterPage") private WebElement cmbCountry;
-	public Select SelecionaCmbCountry() {
+	public Select selecionaCmbCountry() {
 		WebElement selecionaPais = navegador.findElement(By.name("countryListboxRegisterPage"));
 		return new Select(selecionaPais);
 	}
 	
-	@FindBy(how = How.NAME, using = "cityRegisterPage") private WebElement fldCity;
 	public void digitaCity(String city) {
-		fldUserName.sendKeys(city);
+		fldCity.sendKeys(city);
 	}
 	
-	@FindBy(how = How.NAME, using = "addressRegisterPage") private WebElement fldAddress;
 	public void digitaAddress(String address) {
-		fldUserName.sendKeys(address);
+		fldAddress.sendKeys(address);
 	}
 	
-	@FindBy(how = How.NAME, using = "state_/_province_/_regionRegisterPage") private WebElement fldState;
 	public void digitaState(String state) {
-		fldUserName.sendKeys(state);
+		fldState.sendKeys(state);
 	}
 	
-	@FindBy(how = How.NAME, using = "postal_codeRegisterPage") private WebElement fldPostalCode;
 	public void digitaPostalCode(String postalCode) {
-		fldUserName.sendKeys(postalCode);
+		fldPostalCode.sendKeys(postalCode);
 	}
 	
-	@FindBy(how = How.NAME, using = "i_agree") private WebElement chkIAgree;
 	public void clicaChkIAgree() {
-		JavascriptExecutor jse = (JavascriptExecutor)navegador;
-        jse.executeScript("scrollBy(0,200)", "");
+		scrollDown();
 		chkIAgree.click();
 	}
 
-	@FindBy(how = How.ID, using = "register_btnundefined") private WebElement btnRegister;
 	public void clicaBtnRegister() {
-		JavascriptExecutor jse = (JavascriptExecutor)navegador;
-		jse.executeScript("scrollBy(0,200)", "");
-		chkIAgree.click();
+		btnRegister.click();
 	}
 	
-	@FindBy(how = How.XPATH, using = "//*[@id=\"registerPage\"]/article/sec-form/div[2]/label[1]") private WebElement lblUsuarioJaExiste;
-	public String getLblUsuarioJaExiste() {
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(navegador).withTimeout(Duration.ofSeconds(10))
-				.pollingEvery(Duration.ofSeconds(1)).ignoring(NoSuchElementException.class)
-				.ignoring(StaleElementReferenceException.class);
-
-		return wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//*[@id=\"registerPage\"]/article/sec-form/div[2]/label[1]"))).getText();
-
+	public boolean getLblUsuarioJaExiste() {
+		jseWait();
+		return lblUsuarioJaExiste.isDisplayed();
 	}
 	
 	

@@ -1,4 +1,4 @@
-package br.com.rsinet.HUB_TDD.utility;
+package br.com.rsinet.hub_bdd.utility;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +13,7 @@ public class Print {
 
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(src, new File(".\\Evidencias\\"
+			FileUtils.copyFile(src, new File(".\\EvidenciasBDD\\"
 					+ System.currentTimeMillis() + ".png"));
 		}
 		catch (IOException e)
