@@ -4,6 +4,9 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.hub_bdd.PageObjects.HomePage;
+import br.com.rsinet.hub_bdd.manager.FileReaderManager;
+import br.com.rsinet.hub_bdd.manager.PageObjectManager;
+import br.com.rsinet.hub_bdd.manager.WebDriverManager;
 import br.com.rsinet.hub_bdd.utility.Driver;
 import br.com.rsinet.hub_bdd.utility.Print;
 import cucumber.api.java.After;
@@ -13,16 +16,21 @@ import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
 
 public class PesquisaProdutoTestSteps {
-	private WebDriver navegador;
+	WebDriver navegador;
 	HomePage homePage;
-	
+	PageObjectManager pageObjectManager;
+	WebDriverManager webDriverManager;
 	
 	@Dado("^que estou na pagina inicial \"([^\"]*)\"$")
 	public void que_estou_na_pagina_inicial(String arg1) throws Throwable {
-		navegador = Driver.getDriver();
-		homePage = new HomePage(navegador);
-		navegador.get("http://advantageonlineshopping.com/");
-	
+//		navegador = Driver.getDriver();
+		webDriverManager = new WebDriverManager();
+		navegador = webDriverManager.getDriver();
+		
+		pageObjectManager = new PageObjectManager(navegador);
+		homePage = pageObjectManager.getHomePage();
+		
+		navegador.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
 	}
 
 	@Quando("^eu clicar no botão lupa$")
@@ -44,14 +52,16 @@ public class PesquisaProdutoTestSteps {
 	public void será_exibida_a_página_de_descrição_do(String produto) throws Throwable {
 	    Assert.assertEquals(produto, homePage.getDescProduto(produto));
 		Print.captureScreenShot(navegador);
-	    Driver.killDriver(navegador);
+//	    Driver.killDriver(navegador);
+		webDriverManager.quitDriver();
 	}
 
 	@Então("^será apresentada uma mensagem informando que o produto buscado não existe$")
 	public void será_apresentada_uma_mensagem_informando_que_o_produto_buscado_não_existe() throws Throwable {
 		Assert.assertTrue(homePage.getLblProdutoInexistente());
 		Print.captureScreenShot(navegador);
-		Driver.killDriver(navegador);
+//		Driver.killDriver(navegador);
+		webDriverManager.quitDriver();
 	}
 	
 	

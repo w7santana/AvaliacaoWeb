@@ -5,8 +5,12 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import br.com.rsinet.hub_bdd.dataProvider.ConfigFileReader;
+import br.com.rsinet.hub_bdd.manager.FileReaderManager;
+
 public class Driver {
 	private static WebDriver navegador;
+	static ConfigFileReader configFileReader;
 	
 	public static WebDriver getDriver() {
 		if (navegador == null) {
@@ -16,9 +20,10 @@ public class Driver {
 	}
 	
 	public static WebDriver createDriver() {
-		System.setProperty("webdriver.chrome.driver", ".\\drivers\\chromedriver.exe");
+		configFileReader = new ConfigFileReader();
+		System.setProperty("webdriver.chrome.driver", configFileReader.getDriverPath());
 		navegador = new ChromeDriver();
-		navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		navegador.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigReader().getImplicitlyWait(), TimeUnit.SECONDS);
 		navegador.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 		navegador.manage().window().maximize();
 		return navegador;

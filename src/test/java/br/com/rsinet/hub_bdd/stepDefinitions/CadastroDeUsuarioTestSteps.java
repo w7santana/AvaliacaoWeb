@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import br.com.rsinet.hub_bdd.PageObjects.FormCadastroPage;
 import br.com.rsinet.hub_bdd.PageObjects.HomePage;
 import br.com.rsinet.hub_bdd.PageObjects.LoginPage;
+import br.com.rsinet.hub_bdd.manager.FileReaderManager;
+import br.com.rsinet.hub_bdd.manager.PageObjectManager;
+import br.com.rsinet.hub_bdd.manager.WebDriverManager;
 import br.com.rsinet.hub_bdd.utility.Driver;
 import br.com.rsinet.hub_bdd.utility.Print;
 import cucumber.api.java.pt.Dado;
@@ -17,16 +20,23 @@ public class CadastroDeUsuarioTestSteps {
 	HomePage homePage;
 	LoginPage loginPage;
 	FormCadastroPage formCadastroPage;
+	PageObjectManager pageObjectManager;
+	WebDriverManager webDriverManager;
 	String usuarioLogado;
 
 	
 	@Dado("^que estou navegando na p·gina inicial \"([^\"]*)\"$")
 	public void que_estou_navegando_na_p·gina_inicial(String arg1) throws Throwable {
-		navegador = Driver.getDriver();
-		homePage = new HomePage(navegador);
-		loginPage = new LoginPage(navegador);
-		formCadastroPage = new FormCadastroPage(navegador);
-		navegador.get("http://advantageonlineshopping.com/");
+//		navegador = Driver.getDriver();
+		webDriverManager = new WebDriverManager();
+		navegador = webDriverManager.getDriver();
+		
+		pageObjectManager = new PageObjectManager(navegador);
+		homePage = pageObjectManager.getHomePage();
+		loginPage = pageObjectManager.getLoginPage();
+		formCadastroPage = pageObjectManager.getFormCadastroPage();
+		
+		navegador.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
 	}
 	
 	@Quando("^eu clicar no bot„o USER$")
@@ -114,14 +124,16 @@ public class CadastroDeUsuarioTestSteps {
 	public void serei_redirecionado_para_a_p·gina_inicial_e_o_nome_de_meu_usu·rio_aparecer·_prÛximo_ao_bot„o_USER() throws Throwable {
 		Assert.assertEquals(usuarioLogado, homePage.getUsuarioLogado());
 		Print.captureScreenShot(navegador);
-		Driver.killDriver(navegador);
+//		Driver.killDriver(navegador);
+		webDriverManager.quitDriver();
 	}
 	
 	@Ent„o("^ser· apresentada uma mensagem informando que o usu·rio j· existe$")
 	public void ser·ApresentadaUmaMensagemInformandoQueOUsu·rioJ·Existe() throws Throwable {
 		Assert.assertTrue(formCadastroPage.getLblUsuarioJaExiste());
 		Print.captureScreenShot(navegador);
-		Driver.killDriver(navegador);
+//		Driver.killDriver(navegador);
+		webDriverManager.quitDriver();
 	}
 
 }
