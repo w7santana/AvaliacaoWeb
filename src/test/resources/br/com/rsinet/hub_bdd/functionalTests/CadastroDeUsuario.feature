@@ -27,7 +27,7 @@ Esquema do Cenário:  Cadastro de usuário com sucesso
 	
 	Exemplos:
 	|usuario|email|password|confPassword|primeiroNome|sobreNome|phone|pais|cidade|endereco|estado|cep|
-	|joao12322|joaosilva@email.com|!Joao123|!Joao123|João|Silva|1198888-8888|Brazil|São Paulo|Av. Paulista, 200|São Paulo|01311-922|
+	|joao12355|joaosilva@email.com|!Joao123|!Joao123|João|Silva|1198888-8888|Brazil|São Paulo|Av. Paulista, 200|São Paulo|01311-922|
 		
 Esquema do Cenário: Cadastro negado por usuário já existente
 	Dado que estou navegando na página inicial ""

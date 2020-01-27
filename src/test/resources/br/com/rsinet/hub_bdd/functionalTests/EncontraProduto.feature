@@ -17,7 +17,7 @@ Esquema do Cenário:  Filtrar produto existente
 	
 
 Esquema do Cenário: Mouse não encontrado utilizando os filtros
-	Dado que estou na pagina inicial ""
+	Dado que estou na página inicial ""
 	Quando eu clicar em uma "<categoriaDeProduto>"
 	E clicar no filtro por Scroller
 	E clicar na opção TouchScroll

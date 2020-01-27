@@ -8,10 +8,7 @@ import br.com.rsinet.hub_bdd.dataProvider.ConfigFileReader;
 import br.com.rsinet.hub_bdd.manager.FileReaderManager;
 import br.com.rsinet.hub_bdd.manager.PageObjectManager;
 import br.com.rsinet.hub_bdd.manager.WebDriverManager;
-import br.com.rsinet.hub_bdd.utility.Driver;
 import br.com.rsinet.hub_bdd.utility.Print;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -23,17 +20,9 @@ public class EncontraProdutoTestSteps {
 	ConfigFileReader configFileReader;
 	WebDriverManager webDriverManager;
 	
-//	@Before
-//	public void setup() {
-//		System.out.println("@BEFORE CHAMADO");
-//		navegador = Driver.createDriver();
-//		homePage = new HomePage(navegador);
-//	}
-	
 
 	@Dado("^que estou na página inicial \"([^\"]*)\"$")
 	public void que_estou_na_página_inicial(String arg1) throws Throwable {
-//		navegador = Driver.getDriver();
 		webDriverManager = new WebDriverManager();
 		navegador = webDriverManager.getDriver();
 		
@@ -46,6 +35,11 @@ public class EncontraProdutoTestSteps {
 	@Quando("^eu clicar em uma \"([^\"]*)\"$")
 	public void eu_clicar_em_uma(String categoria) throws Throwable {
 		homePage.selecionaCategoriaProduto(categoria);
+	}
+	
+	@Quando("^eu escolher a categoria \"([^\"]*)\"$")
+	public void eu_escolher_a_categoria(String categoria) throws Throwable {
+		homePage.selecionaCategoriaMouse();
 	}
 
 	@Quando("^clicar em \"([^\"]*)\"$")
@@ -77,7 +71,6 @@ public class EncontraProdutoTestSteps {
 	public void será_exibida_uma_página_de_descrição_do(String produto) throws Throwable {
 		Assert.assertEquals(produto.toUpperCase(), homePage.getLblProduto());
 		Print.captureScreenShot(navegador);
-//		Driver.killDriver(navegador);
 		webDriverManager.quitDriver();
 	}
 	
@@ -85,7 +78,6 @@ public class EncontraProdutoTestSteps {
 	public void será_apresentada_uma_mensagem_na_tela_informando_que_o_produto_buscado_não_existe() throws Throwable {
 	    Assert.assertTrue(homePage.getlblProdutoNaoEncontrado());
 		Print.captureScreenShot(navegador);
-//	    Driver.killDriver(navegador);
 		webDriverManager.quitDriver();
 	}
 	

@@ -1,5 +1,6 @@
 package br.com.rsinet.hub_bdd.stepDefinitions;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.hub_bdd.PageObjects.FormCadastroPage;
@@ -8,12 +9,10 @@ import br.com.rsinet.hub_bdd.PageObjects.LoginPage;
 import br.com.rsinet.hub_bdd.manager.FileReaderManager;
 import br.com.rsinet.hub_bdd.manager.PageObjectManager;
 import br.com.rsinet.hub_bdd.manager.WebDriverManager;
-import br.com.rsinet.hub_bdd.utility.Driver;
 import br.com.rsinet.hub_bdd.utility.Print;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Ent„o;
 import cucumber.api.java.pt.Quando;
-import org.junit.Assert;
 
 public class CadastroDeUsuarioTestSteps {
 	WebDriver navegador;
@@ -27,7 +26,6 @@ public class CadastroDeUsuarioTestSteps {
 	
 	@Dado("^que estou navegando na p·gina inicial \"([^\"]*)\"$")
 	public void que_estou_navegando_na_p·gina_inicial(String arg1) throws Throwable {
-//		navegador = Driver.getDriver();
 		webDriverManager = new WebDriverManager();
 		navegador = webDriverManager.getDriver();
 		
@@ -124,7 +122,6 @@ public class CadastroDeUsuarioTestSteps {
 	public void serei_redirecionado_para_a_p·gina_inicial_e_o_nome_de_meu_usu·rio_aparecer·_prÛximo_ao_bot„o_USER() throws Throwable {
 		Assert.assertEquals(usuarioLogado, homePage.getUsuarioLogado());
 		Print.captureScreenShot(navegador);
-//		Driver.killDriver(navegador);
 		webDriverManager.quitDriver();
 	}
 	
@@ -132,7 +129,6 @@ public class CadastroDeUsuarioTestSteps {
 	public void ser·ApresentadaUmaMensagemInformandoQueOUsu·rioJ·Existe() throws Throwable {
 		Assert.assertTrue(formCadastroPage.getLblUsuarioJaExiste());
 		Print.captureScreenShot(navegador);
-//		Driver.killDriver(navegador);
 		webDriverManager.quitDriver();
 	}
 

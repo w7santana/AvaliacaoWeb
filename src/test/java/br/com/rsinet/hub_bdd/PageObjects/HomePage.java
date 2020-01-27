@@ -18,7 +18,7 @@ public class HomePage extends BasePage {
 	}
 
 	@FindBy(how = How.ID, using = "menuUser") @CacheLookup private WebElement btnUser;
-	@FindBy(how = How.CLASS_NAME, using = "container ") @CacheLookup private WebElement categoriaProduto;
+	@FindBy(how = How.CLASS_NAME, using = "rowSection")  private WebElement categoriaProduto;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"31\"]")	@CacheLookup private WebElement categoriaMouse;
 	@FindBy(how = How.ID, using = "accordionAttrib0") @CacheLookup private WebElement filtraScroller;
 	@FindBy(how = How.ID, using = "accordionColor") @CacheLookup private WebElement filtraCor;
@@ -37,13 +37,14 @@ public class HomePage extends BasePage {
 		btnUser.click();
 	}
 	
-	public void selecionaCategoriaProduto(String categoria) {
-	jseWait();
-	navegador.findElement(By.xpath("//*[. ='" + categoria + "']")).click();
+	public void selecionaCategoriaProduto(String categoria) throws Throwable {
+	categoriaProduto = categoriaProduto.findElement(By.xpath("//*[. ='" + categoria + "']"));
+	jseClick(categoriaProduto);
 	}
 	
 	public void selecionaCategoriaMouse() {
-		categoriaMouse.click();
+		jseClick(categoriaMouse);
+//		categoriaMouse.click();
 	}
 	
 	public void filtraPorScroller() {
@@ -62,7 +63,7 @@ public class HomePage extends BasePage {
 		filtraCor.click();
 	}
 	
-	public void clicaBtnLupa() {
+	public void clicaBtnLupa() throws Throwable {
 		jseWait();
 		btnLupa.click();
 	}
@@ -78,6 +79,7 @@ public class HomePage extends BasePage {
 	public void clicaNoProdutoEncontrado(String produto) {
 		jseWait();
 		produtoEncontrado = navegador.findElement(By.xpath("//*[. ='" + produto + "']"));
+		
 		jseClick(produtoEncontrado);
 	}
 	
