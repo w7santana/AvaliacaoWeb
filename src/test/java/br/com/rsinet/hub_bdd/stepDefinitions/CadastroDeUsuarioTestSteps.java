@@ -10,6 +10,8 @@ import br.com.rsinet.hub_bdd.manager.FileReaderManager;
 import br.com.rsinet.hub_bdd.manager.PageObjectManager;
 import br.com.rsinet.hub_bdd.manager.WebDriverManager;
 import br.com.rsinet.hub_bdd.utility.Print;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -23,17 +25,26 @@ public class CadastroDeUsuarioTestSteps {
 	WebDriverManager webDriverManager;
 	String usuarioLogado;
 
-	
-	@Dado("^que estou navegando na página inicial \"([^\"]*)\"$")
-	public void que_estou_navegando_na_página_inicial(String arg1) throws Throwable {
+	@Before("@CadastroPositivo, @CadastroNegativo")
+	public void beforeFiltro() {
+		System.out.println("@Before(\"@CadastroPositivo, @CadastroNegativo\")");
 		webDriverManager = new WebDriverManager();
 		navegador = webDriverManager.getDriver();
-		
 		pageObjectManager = new PageObjectManager(navegador);
 		homePage = pageObjectManager.getHomePage();
 		loginPage = pageObjectManager.getLoginPage();
 		formCadastroPage = pageObjectManager.getFormCadastroPage();
-		
+	}
+	
+	@After ("@CadastroPositivo, @CadastroNegativo")
+	public void afterFiltro() {
+		System.out.println("@After (\"@CadastroPositivo, @CadastroNegativo\")");
+		Print.captureScreenShot(navegador);
+		webDriverManager.quitDriver();
+	}
+	
+	@Dado("^que estou navegando na página inicial \"([^\"]*)\"$")
+	public void que_estou_navegando_na_página_inicial(String arg1) throws Throwable {
 		navegador.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
 	}
 	
@@ -121,15 +132,11 @@ public class CadastroDeUsuarioTestSteps {
 	@Então("^serei redirecionado para a página inicial e o nome de meu usuário aparecerá próximo ao botão USER$")
 	public void serei_redirecionado_para_a_página_inicial_e_o_nome_de_meu_usuário_aparecerá_próximo_ao_botão_USER() throws Throwable {
 		Assert.assertEquals(usuarioLogado, homePage.getUsuarioLogado());
-		Print.captureScreenShot(navegador);
-		webDriverManager.quitDriver();
 	}
 	
 	@Então("^será apresentada uma mensagem informando que o usuário já existe$")
 	public void seráApresentadaUmaMensagemInformandoQueOUsuárioJáExiste() throws Throwable {
 		Assert.assertTrue(formCadastroPage.getLblUsuarioJaExiste());
-		Print.captureScreenShot(navegador);
-		webDriverManager.quitDriver();
 	}
 
 }

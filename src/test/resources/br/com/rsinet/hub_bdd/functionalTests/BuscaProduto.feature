@@ -5,6 +5,7 @@ Funcionalidade: Busca de produto pela lupa
 	EU quero digitar nome de um produto na barra de pesquisa
 	PARA que eu possa ver a descrição do produto
 
+@BuscaPositiva
 Esquema do Cenário:  Busca de produto existente
 	Dado que estou na pagina inicial ""
 	Quando eu clicar no botão lupa
@@ -18,7 +19,7 @@ Esquema do Cenário:  Busca de produto existente
 	|HP PRO TABLET 608 G1			 |
 	
 	
-
+@BuscaNegativa
 Esquema do Cenário: Busca de produto inexistente
 	Dado que estou na pagina inicial ""
 	Quando eu clicar no botão lupa

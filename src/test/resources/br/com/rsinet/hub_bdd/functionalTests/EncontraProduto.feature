@@ -5,6 +5,7 @@ Funcionalidade: Filtrar produto pela página principal
 	EU quero navegar pela página principal
 	PARA que eu possa encontrar um produto usando os filtros disponíveis
 
+@FiltroPositivo
 Esquema do Cenário:  Filtrar produto existente
 	Dado que estou na página inicial ""
 	Quando eu clicar em uma "<categoriaDeProduto>"
@@ -15,7 +16,7 @@ Esquema do Cenário:  Filtrar produto existente
 	|produto_existente				 	 |categoriaDeProduto|
 	|HP Roar Wireless Speaker	 	 |SPEAKERS					|
 	
-
+@FiltroNegativo
 Esquema do Cenário: Mouse não encontrado utilizando os filtros
 	Dado que estou na página inicial ""
 	Quando eu clicar em uma "<categoriaDeProduto>"

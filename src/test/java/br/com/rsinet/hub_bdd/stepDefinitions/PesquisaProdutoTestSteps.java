@@ -9,6 +9,8 @@ import br.com.rsinet.hub_bdd.manager.FileReaderManager;
 import br.com.rsinet.hub_bdd.manager.PageObjectManager;
 import br.com.rsinet.hub_bdd.manager.WebDriverManager;
 import br.com.rsinet.hub_bdd.utility.Print;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -20,14 +22,24 @@ public class PesquisaProdutoTestSteps {
 	ConfigFileReader configFileReader;
 	WebDriverManager webDriverManager;
 	
-	@Dado("^que estou na pagina inicial \"([^\"]*)\"$")
-	public void que_estou_na_pagina_inicial(String arg1) throws Throwable {
+	@Before("@BuscaPositiva, @BuscaNegativa")
+	public void beforeFiltro() {
+		System.out.println("@Before(\"@BuscaPositiva, @BuscaNegativa\")");
 		webDriverManager = new WebDriverManager();
 		navegador = webDriverManager.getDriver();
-		
 		pageObjectManager = new PageObjectManager(navegador);
 		homePage = pageObjectManager.getHomePage();
-		
+	}
+	
+	@After ("@BuscaPositiva, @BuscaNegativa")
+	public void afterFiltro() {
+		System.out.println("@After (\"@BuscaPositiva, @BuscaNegativa\")");
+		Print.captureScreenShot(navegador);
+		webDriverManager.quitDriver();
+	}
+	
+	@Dado("^que estou na pagina inicial \"([^\"]*)\"$")
+	public void que_estou_na_pagina_inicial(String arg1) throws Throwable {
 		navegador.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
 	}
 
@@ -49,15 +61,11 @@ public class PesquisaProdutoTestSteps {
 	@Então("^será exibida a página de descrição do \"([^\"]*)\"$")
 	public void será_exibida_a_página_de_descrição_do(String produto) throws Throwable {
 	    Assert.assertEquals(produto, homePage.getDescProduto(produto));
-		Print.captureScreenShot(navegador);
-		webDriverManager.quitDriver();
 	}
 
 	@Então("^será apresentada uma mensagem informando que o produto buscado não existe$")
 	public void será_apresentada_uma_mensagem_informando_que_o_produto_buscado_não_existe() throws Throwable {
 		Assert.assertTrue(homePage.getLblProdutoInexistente());
-		Print.captureScreenShot(navegador);
-		webDriverManager.quitDriver();
 	}
 	
 	

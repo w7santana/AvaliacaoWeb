@@ -9,6 +9,8 @@ import br.com.rsinet.hub_bdd.manager.FileReaderManager;
 import br.com.rsinet.hub_bdd.manager.PageObjectManager;
 import br.com.rsinet.hub_bdd.manager.WebDriverManager;
 import br.com.rsinet.hub_bdd.utility.Print;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -20,15 +22,24 @@ public class EncontraProdutoTestSteps {
 	ConfigFileReader configFileReader;
 	WebDriverManager webDriverManager;
 	
+	@Before("@FiltroPositivo, @FiltroNegativo")
+	public void beforeFiltro() {
+		System.out.println("@Before(\"@FiltroPositivo, @FiltroNegativo\")");
+		webDriverManager = new WebDriverManager();
+		navegador = webDriverManager.getDriver();
+		pageObjectManager = new PageObjectManager(navegador);
+		homePage = pageObjectManager.getHomePage();
+	}
+	
+	@After ("@FiltroPositivo, @FiltroNegativo")
+	public void afterFiltro() {
+		System.out.println("@After (\"@FiltroPositivo, @FiltroNegativo\")");
+		Print.captureScreenShot(navegador);
+		webDriverManager.quitDriver();
+	}
 
 	@Dado("^que estou na página inicial \"([^\"]*)\"$")
 	public void que_estou_na_página_inicial(String arg1) throws Throwable {
-		webDriverManager = new WebDriverManager();
-		navegador = webDriverManager.getDriver();
-		
-		pageObjectManager = new PageObjectManager(navegador);
-		homePage = pageObjectManager.getHomePage();
-		
 		navegador.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
 	}
 	
@@ -70,15 +81,11 @@ public class EncontraProdutoTestSteps {
 	@Então("^será exibida uma página de descrição do \"([^\"]*)\"$")
 	public void será_exibida_uma_página_de_descrição_do(String produto) throws Throwable {
 		Assert.assertEquals(produto.toUpperCase(), homePage.getLblProduto());
-		Print.captureScreenShot(navegador);
-		webDriverManager.quitDriver();
 	}
 	
 	@Então("^será apresentada uma mensagem na tela informando que o produto buscado não existe$")
 	public void será_apresentada_uma_mensagem_na_tela_informando_que_o_produto_buscado_não_existe() throws Throwable {
 	    Assert.assertTrue(homePage.getlblProdutoNaoEncontrado());
-		Print.captureScreenShot(navegador);
-		webDriverManager.quitDriver();
 	}
 	
 

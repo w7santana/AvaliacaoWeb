@@ -39,7 +39,7 @@ public class BasePage {
 	 */
 	public void jseWait() {
 		jse = (JavascriptExecutor) navegador;
-		jse.executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], 4000);");
+		jse.executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], 2000);");
 	}
 	
 	/**
@@ -64,12 +64,18 @@ public class BasePage {
 	 * @param WebElement pelo qual deve ser aguardada sua visibilidade.
 	 * @return o elemento uma vez que já esteja visível.
 	 */
-	public WebElement wait(WebElement elemento)
+	public WebElement fluentWait(WebElement elemento)
 	{
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(navegador).withTimeout(Duration.ofSeconds(10))
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(navegador).withTimeout(Duration.ofSeconds(6))
 				.pollingEvery(Duration.ofSeconds(1)).ignoring(NoSuchElementException.class)
 				.ignoring(StaleElementReferenceException.class);
 		return wait.until(ExpectedConditions.visibilityOf(elemento));
+	}
+	
+	public WebElement wait(WebElement elemento)
+	{
+		WebDriverWait wait = new WebDriverWait(navegador, 10);
+		return wait.until(ExpectedConditions.elementToBeClickable(elemento));
 	}
 	
 	

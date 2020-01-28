@@ -10,12 +10,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import br.com.rsinet.hub_bdd.manager.WebDriverManager;
+
 /**
  * Classe responsável pelos locators e ações da HomePage (PageFactory Pattern).
  * @author willian.costa
  *
  */
 public class HomePage extends BasePage {
+	WebDriverManager webDriverManager;
 	
 	/**
 	 * Construtor da page factory HomePage.
@@ -96,8 +99,9 @@ public class HomePage extends BasePage {
 	 * @throws Throwable
 	 */
 	public void clicaBtnLupa() throws Throwable {
-		jseWait();
-		btnLupa.click();
+//		jseWait();
+//		btnLupa.click();
+		fluentWait(btnLupa).click();
 	}
 	
 	/**
@@ -105,7 +109,8 @@ public class HomePage extends BasePage {
 	 * @param String buscarTxt passado como exemplo de parâmetro no cenário da feature.
 	 */
 	public void escreveNoCampoBusca(String buscarTxt) {
-		campoBusca.sendKeys(buscarTxt, Keys.ENTER);
+		campoBusca.sendKeys(buscarTxt + Keys.ENTER);
+		jseWait();
 	}
 	
 	/**
@@ -123,9 +128,10 @@ public class HomePage extends BasePage {
 	 */
 	public void clicaNoProdutoEncontrado(String produto) {
 		jseWait();
-		produtoEncontrado = navegador.findElement(By.xpath("//*[. ='" + produto + "']"));
-		
+		produtoEncontrado = 
+		navegador.findElement(By.xpath("//*[. ='" + produto + "']"));
 		jseClick(produtoEncontrado);
+		
 	}
 	
 	/**
@@ -141,8 +147,10 @@ public class HomePage extends BasePage {
 	 * @return String com o nome do usuário logado no momento.
 	 */
 	public String getUsuarioLogado() {
-		jseWait();
-		return lblUsuarioLogado.getText();
+//		jseWait();
+//		return lblUsuarioLogado.getText();
+		return fluentWait(lblUsuarioLogado).getText();
+//		return lblUsuarioLogado.getText();
 	}
 	
 	/**
@@ -158,9 +166,11 @@ public class HomePage extends BasePage {
 	 * @param produto String passado como exemplo de parâmetro no cenário da feature. 
 	 */
 	public void clicaNoProduto(String produto) {
-		jseWait();
-		produtoEncontrado = navegador.findElement(By.xpath("//*[. ='" + produto + "']"));
-		jseClick(produtoEncontrado);
+//		jseWait();
+//		produtoEncontrado = 
+//		navegador.findElement(By.xpath("//*[. ='" + produto + "']")).click();
+//		jseClick(produtoEncontrado);
+		fluentWait(navegador.findElement(By.xpath("//*[. ='" + produto + "']"))).click();
 	}
 	
 	/**

@@ -5,6 +5,7 @@ Funcionalidade: Cadastro de usuário
 	EU quero me cadastrar no site usando minhas informações pessoais
 	PARA que eu possa usar esse cadastro toda vez que eu me logar no site
 
+@CadastroPositivo
 Esquema do Cenário:  Cadastro de usuário com sucesso
 	Dado que estou navegando na página inicial ""
 	Quando eu clicar no botão USER
@@ -27,8 +28,9 @@ Esquema do Cenário:  Cadastro de usuário com sucesso
 	
 	Exemplos:
 	|usuario|email|password|confPassword|primeiroNome|sobreNome|phone|pais|cidade|endereco|estado|cep|
-	|joao12355|joaosilva@email.com|!Joao123|!Joao123|João|Silva|1198888-8888|Brazil|São Paulo|Av. Paulista, 200|São Paulo|01311-922|
-		
+	|joao129889|joaosilva@email.com|!Joao123|!Joao123|João|Silva|1198888-8888|Brazil|São Paulo|Av. Paulista, 200|São Paulo|01311-922|
+
+@CadastroNegativo
 Esquema do Cenário: Cadastro negado por usuário já existente
 	Dado que estou navegando na página inicial ""
 	Quando eu clicar no botão USER
@@ -51,4 +53,4 @@ Esquema do Cenário: Cadastro negado por usuário já existente
 	
 	Exemplos:
 	|usuario|email|password|confPassword|primeiroNome|sobreNome|phone|pais|cidade|endereco|estado|cep|
-	|joao12322|joaosilva@email.com|!Joao123|!Joao123|João|Silva|1198888-8888|Brazil|São Paulo|Av. Paulista, 200|São Paulo|01311-922|
+	|joao129889|joaosilva@email.com|!Joao123|!Joao123|João|Silva|1198888-8888|Brazil|São Paulo|Av. Paulista, 200|São Paulo|01311-922|
