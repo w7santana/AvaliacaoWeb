@@ -6,10 +6,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-
+/**
+ * Classe responsável pelos locators e ações da LoginPage (PageFactory Pattern).
+ * @author willian.costa
+ *
+ */
 public class LoginPage extends BasePage {
 	
-public LoginPage(WebDriver navegador) {
+	/**
+	 * Construtor da page factory LoginPage.
+	 * @param navegador
+	 */
+	public LoginPage(WebDriver navegador) {
 		super(navegador);
 		PageFactory.initElements(navegador, this);
 	}
@@ -17,7 +25,10 @@ public LoginPage(WebDriver navegador) {
 
 	@FindBy(how = How.LINK_TEXT, using = "CREATE NEW ACCOUNT")
 	private WebElement lnkCreateAccount;
-
+	
+	/**
+	 * Clica no link Create Account.
+	 */
 	public void clicaLnkCreateAccount (){
 		lnkCreateAccount.sendKeys(Keys.ENTER);
 	}

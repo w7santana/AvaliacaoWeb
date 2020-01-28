@@ -1,0 +1,7 @@
+br.com.rsinet.hub_bdd.PageObjects
+br.com.rsinet.hub_bdd.dataProvider
+br.com.rsinet.hub_bdd.enums
+br.com.rsinet.hub_bdd.manager
+br.com.rsinet.hub_bdd.runners
+br.com.rsinet.hub_bdd.stepDefinitions
+br.com.rsinet.hub_bdd.utility

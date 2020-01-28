@@ -8,7 +8,16 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+/**
+ * Classe responsável por criar prints de tela. 
+ * @author willian.costa
+ *
+ */
 public class Print {
+	/**
+	 * Captura, nomeia e armazena print de tela no local especificado.
+	 * @param driver
+	 */
 	public static void captureScreenShot(WebDriver driver) {
 
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

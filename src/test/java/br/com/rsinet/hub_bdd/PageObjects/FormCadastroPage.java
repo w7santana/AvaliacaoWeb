@@ -9,9 +9,18 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+/**
+ * Classe responsável pelos locators e ações da FormCadastroPage (PageFactory Pattern).
+ * @author willian.costa
+ *
+ */
 public class FormCadastroPage extends BasePage{
 	
-public FormCadastroPage(WebDriver navegador) {
+	/**
+	 * Construtor da page factory FormCadastroPage.
+	 * @param navegador
+	 */
+	public FormCadastroPage(WebDriver navegador) {
 		super(navegador);
 		PageFactory.initElements(navegador, this);
 	}
@@ -32,64 +41,122 @@ public FormCadastroPage(WebDriver navegador) {
 	@FindBy(how = How.ID, using = "register_btnundefined") @CacheLookup private WebElement btnRegister;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"registerPage\"]/article/sec-form/div[2]/label[1]") @CacheLookup private WebElement lblUsuarioJaExiste;
 	
+	/**
+	 * Digita no campo username.
+	 * @param username
+	 */
 	public void digitaUserName(String username) {
 		fldUserName.sendKeys(username);
 	}
 	
+	/**
+	 * Digita no campo email.
+	 * @param email
+	 */
 	public void digitaEmail(String email) {
 		fldEmail.sendKeys(email);
 	}
 	
+	/**
+	 * Digita no campo password.
+	 * @param password
+	 */
 	public void digitaPassword(String password) {
 		fldPassword.sendKeys(password);
 	}
 	
+	/**
+	 * Digita no campo confirmPassword.
+	 * @param confirmPassword
+	 */
 	public void digitaConfirmPassword(String confirmPassword) {
 		fldPasswordConfirm.sendKeys(confirmPassword);
 	}
 	
+	/**
+	 * Digita no campo firstName.
+	 * @param firstName
+	 */
 	public void digitaFirstName(String firstName) {
 		fldFirstName.sendKeys(firstName);
 	}
 	
+	/**
+	 * Digita no campo lastName.
+	 * @param lastName
+	 */
 	public void digitaLastName(String lastName) {
 		fldLastName.sendKeys(lastName);
 	}
 	
+	/**
+	 * Digita no campo phone.
+	 * @param phone
+	 */
 	public void digitaPhone(String phone) {
 		fldPhone.sendKeys(phone);
 	}
 	
+	/**
+	 * Seleciona o combo Country.
+	 * @return Select selecionaPais
+	 */
 	public Select selecionaCmbCountry() {
 		WebElement selecionaPais = navegador.findElement(By.name("countryListboxRegisterPage"));
 		return new Select(selecionaPais);
 	}
 	
+	/**
+	 * Digita no campo city.
+	 * @param city
+	 */
 	public void digitaCity(String city) {
 		fldCity.sendKeys(city);
 	}
 	
+	/**
+	 * Digita no campo address.
+	 * @param address
+	 */
 	public void digitaAddress(String address) {
 		fldAddress.sendKeys(address);
 	}
 	
+	/**
+	 * Digita no campo state.
+	 * @param state
+	 */
 	public void digitaState(String state) {
 		fldState.sendKeys(state);
 	}
 	
+	/**
+	 * Digita no campo postalCode.
+	 * @param postalCode
+	 */
 	public void digitaPostalCode(String postalCode) {
 		fldPostalCode.sendKeys(postalCode);
 	}
 	
+	/**
+	 * Rola a página para baixo e clica no botão IAgree.
+	 */
 	public void clicaChkIAgree() {
 		scrollDown();
 		chkIAgree.click();
 	}
-
+	
+	/**
+	 * Clica no botão Register.
+	 */
 	public void clicaBtnRegister() {
 		btnRegister.click();
 	}
 	
+	/**
+	 * Verifica se é apresentada a mensagem de usuário já existente.
+	 * @return boolean true ou false.
+	 */
 	public boolean getLblUsuarioJaExiste() {
 		jseWait();
 		return lblUsuarioJaExiste.isDisplayed();
