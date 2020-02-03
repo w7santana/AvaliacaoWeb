@@ -1,0 +1,76 @@
+-------------------------------------------------------------------------------
+Test set: br.com.rsinet.hub_bdd.runners.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 73, Failures: 2, Errors: 4, Skipped: 7, Time elapsed: 141.862 sec <<< FAILURE!
+Então serei redirecionado para a página inicial e o nome de meu usuário aparecerá próximo ao botão USER(| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |)  Time elapsed: 0.008 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[joao12322]> but was:<[]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at br.com.rsinet.hub_bdd.stepDefinitions.CadastroDeUsuarioTestSteps.serei_redirecionado_para_a_página_inicial_e_o_nome_de_meu_usuário_aparecerá_próximo_ao_botão_USER(CadastroDeUsuarioTestSteps.java:125)
+	at ?.Então serei redirecionado para a página inicial e o nome de meu usuário aparecerá próximo ao botão USER(br/com/rsinet/hub_bdd/functionalTests/CadastroDeUsuario.feature:26)
+
+| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |  Time elapsed: 0.008 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[joao12322]> but was:<[]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at br.com.rsinet.hub_bdd.stepDefinitions.CadastroDeUsuarioTestSteps.serei_redirecionado_para_a_página_inicial_e_o_nome_de_meu_usuário_aparecerá_próximo_ao_botão_USER(CadastroDeUsuarioTestSteps.java:125)
+	at ?.Então serei redirecionado para a página inicial e o nome de meu usuário aparecerá próximo ao botão USER(br/com/rsinet/hub_bdd/functionalTests/CadastroDeUsuario.feature:26)
+
+Quando eu clicar em uma "SPEAKERS"(| HP Roar Wireless Speaker | SPEAKERS |)  Time elapsed: 0 sec  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span id="speakersTxt" aria-label="SpeakersCategoryTxt" class="shop_now roboto-bold ng-binding" role="link" href="javascript:void(0)">...</span> is not clickable at point (229, 302). Other element would receive the click: <div class="loader" style="display: block; opacity: 0.069629;">...</div>
+  (Session info: chrome=79.0.3945.130)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RSI1562', ip: '192.168.1.116', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\WILLIA~1.COS\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64869}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0e4442b88b0120cc9aa06a52fab861ab
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at br.com.rsinet.hub_bdd.PageObjects.HomePage.selecionaCategoriaProduto(HomePage.java:42)
+	at br.com.rsinet.hub_bdd.stepDefinitions.EncontraProdutoTestSteps.eu_clicar_em_uma(EncontraProdutoTestSteps.java:48)
+	at ?.Quando eu clicar em uma "SPEAKERS"(br/com/rsinet/hub_bdd/functionalTests/EncontraProduto.feature:10)
+
+| HP Roar Wireless Speaker | SPEAKERS |  Time elapsed: 0 sec  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span id="speakersTxt" aria-label="SpeakersCategoryTxt" class="shop_now roboto-bold ng-binding" role="link" href="javascript:void(0)">...</span> is not clickable at point (229, 302). Other element would receive the click: <div class="loader" style="display: block; opacity: 0.069629;">...</div>
+  (Session info: chrome=79.0.3945.130)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RSI1562', ip: '192.168.1.116', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\WILLIA~1.COS\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64869}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0e4442b88b0120cc9aa06a52fab861ab
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at br.com.rsinet.hub_bdd.PageObjects.HomePage.selecionaCategoriaProduto(HomePage.java:42)
+	at br.com.rsinet.hub_bdd.stepDefinitions.EncontraProdutoTestSteps.eu_clicar_em_uma(EncontraProdutoTestSteps.java:48)
+	at ?.Quando eu clicar em uma "SPEAKERS"(br/com/rsinet/hub_bdd/functionalTests/EncontraProduto.feature:10)
+
+Quando eu clicar em uma "MICE"(| MICE |)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at br.com.rsinet.hub_bdd.stepDefinitions.EncontraProdutoTestSteps.eu_clicar_em_uma(EncontraProdutoTestSteps.java:48)
+	at ?.Quando eu clicar em uma "MICE"(br/com/rsinet/hub_bdd/functionalTests/EncontraProduto.feature:21)
+
+| MICE |  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at br.com.rsinet.hub_bdd.stepDefinitions.EncontraProdutoTestSteps.eu_clicar_em_uma(EncontraProdutoTestSteps.java:48)
+	at ?.Quando eu clicar em uma "MICE"(br/com/rsinet/hub_bdd/functionalTests/EncontraProduto.feature:21)
+

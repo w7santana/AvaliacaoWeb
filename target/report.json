@@ -1,0 +1,1507 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#language: pt"
+      }
+    ],
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 12408291100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "PesquisaProdutoTestSteps.beforeFiltro()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Busca de produto existente",
+        "description": "",
+        "id": "busca-de-produto-pela-lupa;busca-de-produto-existente;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1125959300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "PesquisaProdutoTestSteps.afterFiltro()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 961100600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que estou na pagina inicial \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 29
+                }
+              ],
+              "location": "PesquisaProdutoTestSteps.que_estou_na_pagina_inicial(String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 2568006300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "eu clicar no botão lupa",
+            "match": {
+              "location": "PesquisaProdutoTestSteps.eu_clicar_no_botão_lupa()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 2945081400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "preencher o campo pesquisa com o nome do \"HP ROAR WIRELESS SPEAKER\" pressionando a tecla enter",
+            "match": {
+              "arguments": [
+                {
+                  "val": "HP ROAR WIRELESS SPEAKER",
+                  "offset": 42
+                }
+              ],
+              "location": "PesquisaProdutoTestSteps.preencher_o_campo_pesquisa_com_o_nome_do_pressionando_a_tecla_enter(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 2086276500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "clicar no \"HP ROAR WIRELESS SPEAKER\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "HP ROAR WIRELESS SPEAKER",
+                  "offset": 11
+                }
+              ],
+              "location": "PesquisaProdutoTestSteps.clicar_no(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 310306700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "será exibida a página de descrição do \"HP ROAR WIRELESS SPEAKER\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "HP ROAR WIRELESS SPEAKER",
+                  "offset": 39
+                }
+              ],
+              "location": "PesquisaProdutoTestSteps.será_exibida_a_página_de_descrição_do(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "line": 8,
+            "name": "@BuscaPositiva"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 9327974800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "PesquisaProdutoTestSteps.beforeFiltro()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "Busca de produto existente",
+        "description": "",
+        "id": "busca-de-produto-pela-lupa;busca-de-produto-existente;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 1137782500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "PesquisaProdutoTestSteps.afterFiltro()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 832337200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que estou na pagina inicial \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 29
+                }
+              ],
+              "location": "PesquisaProdutoTestSteps.que_estou_na_pagina_inicial(String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 2667491900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "eu clicar no botão lupa",
+            "match": {
+              "location": "PesquisaProdutoTestSteps.eu_clicar_no_botão_lupa()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 2726364000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "preencher o campo pesquisa com o nome do \"HP PRO TABLET 608 G1\" pressionando a tecla enter",
+            "match": {
+              "arguments": [
+                {
+                  "val": "HP PRO TABLET 608 G1",
+                  "offset": 42
+                }
+              ],
+              "location": "PesquisaProdutoTestSteps.preencher_o_campo_pesquisa_com_o_nome_do_pressionando_a_tecla_enter(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 2140986600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "clicar no \"HP PRO TABLET 608 G1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "HP PRO TABLET 608 G1",
+                  "offset": 11
+                }
+              ],
+              "location": "PesquisaProdutoTestSteps.clicar_no(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 244127500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "será exibida a página de descrição do \"HP PRO TABLET 608 G1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "HP PRO TABLET 608 G1",
+                  "offset": 39
+                }
+              ],
+              "location": "PesquisaProdutoTestSteps.será_exibida_a_página_de_descrição_do(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "line": 8,
+            "name": "@BuscaPositiva"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 9319850300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "PesquisaProdutoTestSteps.beforeFiltro()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "Busca de produto inexistente",
+        "description": "",
+        "id": "busca-de-produto-pela-lupa;busca-de-produto-inexistente;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1055412600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "PesquisaProdutoTestSteps.afterFiltro()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 842729000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "que estou na pagina inicial \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 29
+                }
+              ],
+              "location": "PesquisaProdutoTestSteps.que_estou_na_pagina_inicial(String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 3022759900,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "eu clicar no botão lupa",
+            "match": {
+              "location": "PesquisaProdutoTestSteps.eu_clicar_no_botão_lupa()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 2425925700,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "preencher o campo pesquisa com o nome do \"mouse gamer\" pressionando a tecla enter",
+            "match": {
+              "arguments": [
+                {
+                  "val": "mouse gamer",
+                  "offset": 42
+                }
+              ],
+              "location": "PesquisaProdutoTestSteps.preencher_o_campo_pesquisa_com_o_nome_do_pressionando_a_tecla_enter(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 62943000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "será apresentada uma mensagem informando que o produto buscado não existe",
+            "match": {
+              "location": "PesquisaProdutoTestSteps.será_apresentada_uma_mensagem_informando_que_o_produto_buscado_não_existe()"
+            },
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "line": 22,
+            "name": "@BuscaNegativa"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 9305618900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "PesquisaProdutoTestSteps.beforeFiltro()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "Busca de produto inexistente",
+        "description": "",
+        "id": "busca-de-produto-pela-lupa;busca-de-produto-inexistente;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 1065455900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "PesquisaProdutoTestSteps.afterFiltro()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 804794400,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "que estou na pagina inicial \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 29
+                }
+              ],
+              "location": "PesquisaProdutoTestSteps.que_estou_na_pagina_inicial(String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 2568309300,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "eu clicar no botão lupa",
+            "match": {
+              "location": "PesquisaProdutoTestSteps.eu_clicar_no_botão_lupa()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 2401509600,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "preencher o campo pesquisa com o nome do \"AllInOne\" pressionando a tecla enter",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AllInOne",
+                  "offset": 42
+                }
+              ],
+              "location": "PesquisaProdutoTestSteps.preencher_o_campo_pesquisa_com_o_nome_do_pressionando_a_tecla_enter(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 52781200,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "será apresentada uma mensagem informando que o produto buscado não existe",
+            "match": {
+              "location": "PesquisaProdutoTestSteps.será_apresentada_uma_mensagem_informando_que_o_produto_buscado_não_existe()"
+            },
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "line": 22,
+            "name": "@BuscaNegativa"
+          }
+        ]
+      }
+    ],
+    "name": "Busca de produto pela lupa",
+    "description": "\nCOMO um cliente\nEU quero digitar nome de um produto na barra de pesquisa\nPARA que eu possa ver a descrição do produto",
+    "id": "busca-de-produto-pela-lupa",
+    "keyword": "Funcionalidade",
+    "uri": "br/com/rsinet/hub_bdd/functionalTests/BuscaProduto.feature"
+  },
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#language: pt"
+      }
+    ],
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 9323691000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CadastroDeUsuarioTestSteps.beforeFiltro()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "Cadastro de usuário com sucesso",
+        "description": "",
+        "id": "cadastro-de-usuário;cadastro-de-usuário-com-sucesso;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1060515700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CadastroDeUsuarioTestSteps.afterFiltro()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 855480500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que estou navegando na página inicial \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 39
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.que_estou_navegando_na_página_inicial(String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 2580773200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "eu clicar no botão USER",
+            "match": {
+              "location": "CadastroDeUsuarioTestSteps.eu_clicar_no_botão_USER()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 578901300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "clicar no link CREATE NEW ACCOUNT",
+            "match": {
+              "location": "CadastroDeUsuarioTestSteps.clicar_no_link_CREATE_NEW_ACCOUNT()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 570908200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "digitar \"joao1244\" no campo Username",
+            "match": {
+              "arguments": [
+                {
+                  "val": "joao1244",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Username(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 424687700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "digitar \"joaosilva@email.com\" no campo Email",
+            "match": {
+              "arguments": [
+                {
+                  "val": "joaosilva@email.com",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Email(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 314688200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "digitar \"!Joao123\" no campo Password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "!Joao123",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Password(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 297856900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "digitar \"!Joao123\" no campo Confirm password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "!Joao123",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Confirm_password(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 250973300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "digitar \"João\" no campo First Name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "João",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_First_Name(String)"
+            },
+            "matchedColumns": [
+              4
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 223746500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "digitar \"Silva\" no campo Last Name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Silva",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Last_Name(String)"
+            },
+            "matchedColumns": [
+              5
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 314557900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "digitar \"1198888-8888\" no campo Last Phone Number",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1198888-8888",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Last_Phone_Number(String)"
+            },
+            "matchedColumns": [
+              6
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 107300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "selecionar \"Brazil\" no combo Country",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Brazil",
+                  "offset": 12
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.selecionar_no_combo_Country(String)"
+            },
+            "matchedColumns": [
+              7
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 543079200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "digitar \"São Paulo\" no campo City",
+            "match": {
+              "arguments": [
+                {
+                  "val": "São Paulo",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_City(String)"
+            },
+            "matchedColumns": [
+              8
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 374938400,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "digitar \"Av. Paulista, 200\" no campo Address",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Av. Paulista, 200",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Address(String)"
+            },
+            "matchedColumns": [
+              9
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 238000300,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "digitar \"São Paulo\" no campo State / Province / Region",
+            "match": {
+              "arguments": [
+                {
+                  "val": "São Paulo",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_State_Province_Region(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 328113300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "digitar \"01311-922\" no campo Postal Code",
+            "match": {
+              "arguments": [
+                {
+                  "val": "01311-922",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Postal_Code(String)"
+            },
+            "matchedColumns": [
+              11
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 160732100,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "clicar no botão para aceitar os termos de uso",
+            "match": {
+              "location": "CadastroDeUsuarioTestSteps.clicar_no_botão_para_aceitar_os_termos_de_uso()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 116301300,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "clicar no botão REGISTER",
+            "match": {
+              "location": "CadastroDeUsuarioTestSteps.clicar_no_botão_REGISTER()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 6197398300,
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (234b58f4c22fd6b92771fd3cc6944862)] -\u003e xpath: //*[@id\u003d\"menuUserLink\"]/span] (tried for 6 second(s) with 1000 milliseconds interval)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027RSI1562\u0027, ip: \u002710.1.0.98\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_231\u0027\nDriver info: driver.version: unknown\r\n\tat org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\r\n\tat br.com.rsinet.hub_bdd.PageObjects.BasePage.fluentWait(BasePage.java:72)\r\n\tat br.com.rsinet.hub_bdd.PageObjects.HomePage.getUsuarioLogado(HomePage.java:152)\r\n\tat br.com.rsinet.hub_bdd.stepDefinitions.CadastroDeUsuarioTestSteps.serei_redirecionado_para_a_página_inicial_e_o_nome_de_meu_usuário_aparecerá_próximo_ao_botão_USER(CadastroDeUsuarioTestSteps.java:143)\r\n\tat ✽.Então serei redirecionado para a página inicial e o nome de meu usuário aparecerá próximo ao botão USER(br/com/rsinet/hub_bdd/functionalTests/CadastroDeUsuario.feature:27)\r\n",
+              "status": "failed"
+            },
+            "line": 27,
+            "name": "serei redirecionado para a página inicial e o nome de meu usuário aparecerá próximo ao botão USER",
+            "match": {
+              "location": "CadastroDeUsuarioTestSteps.serei_redirecionado_para_a_página_inicial_e_o_nome_de_meu_usuário_aparecerá_próximo_ao_botão_USER()"
+            },
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "line": 8,
+            "name": "@CadastroPositivo"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 9319969900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CadastroDeUsuarioTestSteps.beforeFiltro()"
+            }
+          }
+        ],
+        "line": 56,
+        "name": "Cadastro negado por usuário já existente",
+        "description": "",
+        "id": "cadastro-de-usuário;cadastro-negado-por-usuário-já-existente;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1080457000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CadastroDeUsuarioTestSteps.afterFiltro()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 803127600,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "que estou navegando na página inicial \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 39
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.que_estou_navegando_na_página_inicial(String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 2588221700,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "eu clicar no botão USER",
+            "match": {
+              "location": "CadastroDeUsuarioTestSteps.eu_clicar_no_botão_USER()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 527739700,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "clicar no link CREATE NEW ACCOUNT",
+            "match": {
+              "location": "CadastroDeUsuarioTestSteps.clicar_no_link_CREATE_NEW_ACCOUNT()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 554697600,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "digitar \"joao1244\" no campo Username",
+            "match": {
+              "arguments": [
+                {
+                  "val": "joao1244",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Username(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 454043200,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "digitar \"joaosilva@email.com\" no campo Email",
+            "match": {
+              "arguments": [
+                {
+                  "val": "joaosilva@email.com",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Email(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 321304500,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "digitar \"!Joao123\" no campo Password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "!Joao123",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Password(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 274151100,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "digitar \"!Joao123\" no campo Confirm password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "!Joao123",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Confirm_password(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 215728500,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "digitar \"João\" no campo First Name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "João",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_First_Name(String)"
+            },
+            "matchedColumns": [
+              4
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 211915300,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "digitar \"Silva\" no campo Last Name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Silva",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Last_Name(String)"
+            },
+            "matchedColumns": [
+              5
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 315718700,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "digitar \"1198888-8888\" no campo Last Phone Number",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1198888-8888",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Last_Phone_Number(String)"
+            },
+            "matchedColumns": [
+              6
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 80100,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "selecionar \"Brazil\" no combo Country",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Brazil",
+                  "offset": 12
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.selecionar_no_combo_Country(String)"
+            },
+            "matchedColumns": [
+              7
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 571290400,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "digitar \"São Paulo\" no campo City",
+            "match": {
+              "arguments": [
+                {
+                  "val": "São Paulo",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_City(String)"
+            },
+            "matchedColumns": [
+              8
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 352855400,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "digitar \"Av. Paulista, 200\" no campo Address",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Av. Paulista, 200",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Address(String)"
+            },
+            "matchedColumns": [
+              9
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 234429300,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "digitar \"São Paulo\" no campo State / Province / Region",
+            "match": {
+              "arguments": [
+                {
+                  "val": "São Paulo",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_State_Province_Region(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 282557900,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "digitar \"01311-922\" no campo Postal Code",
+            "match": {
+              "arguments": [
+                {
+                  "val": "01311-922",
+                  "offset": 9
+                }
+              ],
+              "location": "CadastroDeUsuarioTestSteps.digitar_no_campo_Postal_Code(String)"
+            },
+            "matchedColumns": [
+              11
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 166948000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "clicar no botão para aceitar os termos de uso",
+            "match": {
+              "location": "CadastroDeUsuarioTestSteps.clicar_no_botão_para_aceitar_os_termos_de_uso()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 142895400,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "clicar no botão REGISTER",
+            "match": {
+              "location": "CadastroDeUsuarioTestSteps.clicar_no_botão_REGISTER()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 2138136100,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "será apresentada uma mensagem informando que o usuário já existe",
+            "match": {
+              "location": "CadastroDeUsuarioTestSteps.seráApresentadaUmaMensagemInformandoQueOUsuárioJáExiste()"
+            },
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "line": 33,
+            "name": "@CadastroNegativo"
+          }
+        ]
+      }
+    ],
+    "name": "Cadastro de usuário",
+    "description": "\nCOMO um usuário\nEU quero me cadastrar no site usando minhas informações pessoais\nPARA que eu possa usar esse cadastro toda vez que eu me logar no site",
+    "id": "cadastro-de-usuário",
+    "keyword": "Funcionalidade",
+    "uri": "br/com/rsinet/hub_bdd/functionalTests/CadastroDeUsuario.feature"
+  },
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#language: pt"
+      }
+    ],
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 9299024600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EncontraProdutoTestSteps.beforeFiltro()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Filtrar produto existente",
+        "description": "",
+        "id": "filtrar-produto-pela-página-principal;filtrar-produto-existente;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1067500600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EncontraProdutoTestSteps.afterFiltro()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 970672000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que estou na página inicial \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 29
+                }
+              ],
+              "location": "EncontraProdutoTestSteps.que_estou_na_página_inicial(String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 5046667900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "eu clicar em uma \"SPEAKERS\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SPEAKERS",
+                  "offset": 18
+                }
+              ],
+              "location": "EncontraProdutoTestSteps.eu_clicar_em_uma(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1124114100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "clicar em \"HP Roar Wireless Speaker\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "HP Roar Wireless Speaker",
+                  "offset": 11
+                }
+              ],
+              "location": "EncontraProdutoTestSteps.clicar_em(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1101444800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "será exibida uma página de descrição do \"HP Roar Wireless Speaker\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "HP Roar Wireless Speaker",
+                  "offset": 41
+                }
+              ],
+              "location": "EncontraProdutoTestSteps.será_exibida_uma_página_de_descrição_do(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "line": 8,
+            "name": "@FiltroPositivo"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 9302721800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EncontraProdutoTestSteps.beforeFiltro()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "Mouse não encontrado utilizando os filtros",
+        "description": "",
+        "id": "filtrar-produto-pela-página-principal;mouse-não-encontrado-utilizando-os-filtros;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1088932400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EncontraProdutoTestSteps.afterFiltro()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 841600000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "que estou na página inicial \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 29
+                }
+              ],
+              "location": "EncontraProdutoTestSteps.que_estou_na_página_inicial(String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 4967795000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "eu clicar em uma \"MICE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "MICE",
+                  "offset": 18
+                }
+              ],
+              "location": "EncontraProdutoTestSteps.eu_clicar_em_uma(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1168965100,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "clicar no filtro por Scroller",
+            "match": {
+              "location": "EncontraProdutoTestSteps.clicar_no_filtro_por_Scroller()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 316118700,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "clicar na opção TouchScroll",
+            "match": {
+              "location": "EncontraProdutoTestSteps.clicar_na_opção_TouchScroll()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 112613600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "clicar no filtro por Cor",
+            "match": {
+              "location": "EncontraProdutoTestSteps.clicar_no_filtro_por_Cor()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 121975500,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "clicar na Cor Azul",
+            "match": {
+              "location": "EncontraProdutoTestSteps.clicar_na_Cor_Azul()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 62227000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "será apresentada uma mensagem na tela informando que o produto buscado não existe",
+            "match": {
+              "location": "EncontraProdutoTestSteps.será_apresentada_uma_mensagem_na_tela_informando_que_o_produto_buscado_não_existe()"
+            },
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "line": 19,
+            "name": "@FiltroNegativo"
+          }
+        ]
+      }
+    ],
+    "name": "Filtrar produto pela página principal",
+    "description": "\nCOMO um cliente\nEU quero navegar pela página principal\nPARA que eu possa encontrar um produto usando os filtros disponíveis",
+    "id": "filtrar-produto-pela-página-principal",
+    "keyword": "Funcionalidade",
+    "uri": "br/com/rsinet/hub_bdd/functionalTests/EncontraProduto.feature"
+  }
+]

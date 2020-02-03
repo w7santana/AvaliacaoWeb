@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="73" failures="2" name="br.com.rsinet.hub_bdd.runners.TestRunner" time="0.064" errors="4" skipped="7">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\bin"/>
+    <property name="java.vm.version" value="25.231-b11"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\willian.costa\eclipse-workspace\servlets\hub_bdd"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\willian.costa\eclipse-workspace\servlets\hub_bdd"/>
+    <property name="java.runtime.version" value="1.8.0_231-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_231\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\WILLIA~1.COS\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\apache-maven-3.6.2\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_231\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Java\jdk1.8.0_231\bin;C:\apache-maven-3.6.2\bin;C:\Users\willian.costa\Downloads\apache-ant-1.10.7\bin;C:\Users\willian.costa\Downloads\apache-ant-1.10.7;C:\Program Files\Java\jdk1.8.0_231\bin;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Program Files\Git\cmd;C:\Users\willian.costa\AppData\Local\Android\Sdk\tools;C:\Users\willian.costa\AppData\Local\Android\Sdk\tools\bin;C:\Users\willian.costa\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\nodejs\;C:\Ruby24-x64\bin;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.3.3\bin;C:\Ruby26-x64\bin;C:\Users\willian.costa\AppData\Local\Microsoft\WindowsApps;C:\Users\willian.costa\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\willian.costa\AppData\Roaming\npm;."/>
+    <property name="maven.conf" value="C:\apache-maven-3.6.2\bin\../conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\apache-maven-3.6.2\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\willian.costa"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="willian.costa"/>
+    <property name="java.class.path" value="C:\apache-maven-3.6.2\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_231\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="pt"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_231"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_231\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_231\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_231\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp850"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\apache-maven-3.6.2\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp850"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="| HP ROAR WIRELESS SPEAKER |" name="Dado que estou na pagina inicial &quot;http://advantageonlineshopping.com/&quot;" time="0.004"/>
+  <testcase classname="| HP ROAR WIRELESS SPEAKER |" name="Quando eu clicar no botão lupa" time="0"/>
+  <testcase classname="| HP ROAR WIRELESS SPEAKER |" name="E preencher o campo pesquisa com o nome do &quot;HP ROAR WIRELESS SPEAKER&quot; pressionando a tecla enter" time="0.008"/>
+  <testcase classname="| HP ROAR WIRELESS SPEAKER |" name="E clicar no &quot;HP ROAR WIRELESS SPEAKER&quot;" time="0"/>
+  <testcase classname="| HP ROAR WIRELESS SPEAKER |" name="Então será exibida a página de descrição do &quot;HP ROAR WIRELESS SPEAKER&quot;" time="0"/>
+  <testcase classname="| HP ROAR WIRELESS SPEAKER |" name="| HP ROAR WIRELESS SPEAKER |" time="0"/>
+  <testcase classname="| HP PRO TABLET 608 G1 |" name="Dado que estou na pagina inicial &quot;http://advantageonlineshopping.com/&quot;" time="0"/>
+  <testcase classname="| HP PRO TABLET 608 G1 |" name="Quando eu clicar no botão lupa" time="0"/>
+  <testcase classname="| HP PRO TABLET 608 G1 |" name="E preencher o campo pesquisa com o nome do &quot;HP PRO TABLET 608 G1&quot; pressionando a tecla enter" time="0"/>
+  <testcase classname="| HP PRO TABLET 608 G1 |" name="E clicar no &quot;HP PRO TABLET 608 G1&quot;" time="0"/>
+  <testcase classname="| HP PRO TABLET 608 G1 |" name="Então será exibida a página de descrição do &quot;HP PRO TABLET 608 G1&quot;" time="0"/>
+  <testcase classname="| HP PRO TABLET 608 G1 |" name="| HP PRO TABLET 608 G1 |" time="0.004"/>
+  <testcase classname="| mouse gamer |" name="Dado que estou na pagina inicial &quot;http://advantageonlineshopping.com/&quot;" time="0"/>
+  <testcase classname="| mouse gamer |" name="Quando eu clicar no botão lupa" time="0"/>
+  <testcase classname="| mouse gamer |" name="E preencher o campo pesquisa com o nome do &quot;mouse gamer&quot; pressionando a tecla enter" time="0"/>
+  <testcase classname="| mouse gamer |" name="Então será apresentada uma mensagem informando que o produto buscado não existe" time="0"/>
+  <testcase classname="| mouse gamer |" name="| mouse gamer |" time="0"/>
+  <testcase classname="| AllInOne |" name="Dado que estou na pagina inicial &quot;http://advantageonlineshopping.com/&quot;" time="0"/>
+  <testcase classname="| AllInOne |" name="Quando eu clicar no botão lupa" time="0"/>
+  <testcase classname="| AllInOne |" name="E preencher o campo pesquisa com o nome do &quot;AllInOne&quot; pressionando a tecla enter" time="0"/>
+  <testcase classname="| AllInOne |" name="Então será apresentada uma mensagem informando que o produto buscado não existe" time="0"/>
+  <testcase classname="| AllInOne |" name="| AllInOne |" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="Dado que estou navegando na página inicial &quot;&quot;" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="Quando eu clicar no botão USER" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E clicar no link CREATE NEW ACCOUNT" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;joao12322&quot; no campo Username" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;joaosilva@email.com&quot; no campo Email" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;!Joao123&quot; no campo Password" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;!Joao123&quot; no campo Confirm password" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;João&quot; no campo First Name" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;Silva&quot; no campo Last Name" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;1198888-8888&quot; no campo Last Phone Number" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E selecionar &quot;Brazil&quot; no combo Country" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;São Paulo&quot; no campo City" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;Av. Paulista, 200&quot; no campo Address" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;São Paulo&quot; no campo State / Province / Region" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;01311-922&quot; no campo Postal Code" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E clicar no botão para aceitar os termos de uso" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E clicar no botão REGISTER" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="Então serei redirecionado para a página inicial e o nome de meu usuário aparecerá próximo ao botão USER" time="0.008">
+    <failure message="expected:&lt;[joao12322]&gt; but was:&lt;[]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[joao12322]&gt; but was:&lt;[]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at br.com.rsinet.hub_bdd.stepDefinitions.CadastroDeUsuarioTestSteps.serei_redirecionado_para_a_página_inicial_e_o_nome_de_meu_usuário_aparecerá_próximo_ao_botão_USER(CadastroDeUsuarioTestSteps.java:125)
+	at ✽.Então serei redirecionado para a página inicial e o nome de meu usuário aparecerá próximo ao botão USER(br/com/rsinet/hub_bdd/functionalTests/CadastroDeUsuario.feature:26)
+</failure>
+  </testcase>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" time="0.008">
+    <failure message="expected:&lt;[joao12322]&gt; but was:&lt;[]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[joao12322]&gt; but was:&lt;[]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at br.com.rsinet.hub_bdd.stepDefinitions.CadastroDeUsuarioTestSteps.serei_redirecionado_para_a_página_inicial_e_o_nome_de_meu_usuário_aparecerá_próximo_ao_botão_USER(CadastroDeUsuarioTestSteps.java:125)
+	at ✽.Então serei redirecionado para a página inicial e o nome de meu usuário aparecerá próximo ao botão USER(br/com/rsinet/hub_bdd/functionalTests/CadastroDeUsuario.feature:26)
+</failure>
+  </testcase>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="Dado que estou navegando na página inicial &quot;&quot;" time="0.004"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="Quando eu clicar no botão USER" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E clicar no link CREATE NEW ACCOUNT" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;joao12322&quot; no campo Username" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;joaosilva@email.com&quot; no campo Email" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;!Joao123&quot; no campo Password" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;!Joao123&quot; no campo Confirm password" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;João&quot; no campo First Name" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;Silva&quot; no campo Last Name" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;1198888-8888&quot; no campo Last Phone Number" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E selecionar &quot;Brazil&quot; no combo Country" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;São Paulo&quot; no campo City" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;Av. Paulista, 200&quot; no campo Address" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;São Paulo&quot; no campo State / Province / Region" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E digitar &quot;01311-922&quot; no campo Postal Code" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E clicar no botão para aceitar os termos de uso" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="E clicar no botão REGISTER" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="Então será apresentada uma mensagem informando que o usuário já existe" time="0"/>
+  <testcase classname="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" name="| joao12322 | joaosilva@email.com | !Joao123 | !Joao123 | João | Silva | 1198888-8888 | Brazil | São Paulo | Av. Paulista, 200 | São Paulo | 01311-922 |" time="0"/>
+  <testcase classname="| HP Roar Wireless Speaker | SPEAKERS |" name="Dado que estou na página inicial &quot;&quot;" time="0"/>
+  <testcase classname="| HP Roar Wireless Speaker | SPEAKERS |" name="Quando eu clicar em uma &quot;SPEAKERS&quot;" time="0">
+    <error message="element click intercepted: Element &lt;span id=&quot;speakersTxt&quot; aria-label=&quot;SpeakersCategoryTxt&quot; class=&quot;shop_now roboto-bold ng-binding&quot; role=&quot;link&quot; href=&quot;javascript:void(0)&quot;&gt;...&lt;/span&gt; is not clickable at point (229, 302). Other element would receive the click: &lt;div class=&quot;loader&quot; style=&quot;display: block; opacity: 0.069629;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=79.0.3945.130)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;RSI1562&apos;, ip: &apos;192.168.1.116&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\WILLIA~1.COS\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64869}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0e4442b88b0120cc9aa06a52fab861ab" type="org.openqa.selenium.ElementClickInterceptedException">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span id=&quot;speakersTxt&quot; aria-label=&quot;SpeakersCategoryTxt&quot; class=&quot;shop_now roboto-bold ng-binding&quot; role=&quot;link&quot; href=&quot;javascript:void(0)&quot;&gt;...&lt;/span&gt; is not clickable at point (229, 302). Other element would receive the click: &lt;div class=&quot;loader&quot; style=&quot;display: block; opacity: 0.069629;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=79.0.3945.130)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;RSI1562&apos;, ip: &apos;192.168.1.116&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\WILLIA~1.COS\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64869}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0e4442b88b0120cc9aa06a52fab861ab
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at br.com.rsinet.hub_bdd.PageObjects.HomePage.selecionaCategoriaProduto(HomePage.java:42)
+	at br.com.rsinet.hub_bdd.stepDefinitions.EncontraProdutoTestSteps.eu_clicar_em_uma(EncontraProdutoTestSteps.java:48)
+	at ✽.Quando eu clicar em uma &quot;SPEAKERS&quot;(br/com/rsinet/hub_bdd/functionalTests/EncontraProduto.feature:10)
+</error>
+  </testcase>
+  <testcase classname="| HP Roar Wireless Speaker | SPEAKERS |" name="| HP Roar Wireless Speaker | SPEAKERS |" time="0">
+    <error message="element click intercepted: Element &lt;span id=&quot;speakersTxt&quot; aria-label=&quot;SpeakersCategoryTxt&quot; class=&quot;shop_now roboto-bold ng-binding&quot; role=&quot;link&quot; href=&quot;javascript:void(0)&quot;&gt;...&lt;/span&gt; is not clickable at point (229, 302). Other element would receive the click: &lt;div class=&quot;loader&quot; style=&quot;display: block; opacity: 0.069629;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=79.0.3945.130)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;RSI1562&apos;, ip: &apos;192.168.1.116&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\WILLIA~1.COS\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64869}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0e4442b88b0120cc9aa06a52fab861ab" type="org.openqa.selenium.ElementClickInterceptedException">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span id=&quot;speakersTxt&quot; aria-label=&quot;SpeakersCategoryTxt&quot; class=&quot;shop_now roboto-bold ng-binding&quot; role=&quot;link&quot; href=&quot;javascript:void(0)&quot;&gt;...&lt;/span&gt; is not clickable at point (229, 302). Other element would receive the click: &lt;div class=&quot;loader&quot; style=&quot;display: block; opacity: 0.069629;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=79.0.3945.130)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;RSI1562&apos;, ip: &apos;192.168.1.116&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\WILLIA~1.COS\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:64869}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0e4442b88b0120cc9aa06a52fab861ab
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at br.com.rsinet.hub_bdd.PageObjects.HomePage.selecionaCategoriaProduto(HomePage.java:42)
+	at br.com.rsinet.hub_bdd.stepDefinitions.EncontraProdutoTestSteps.eu_clicar_em_uma(EncontraProdutoTestSteps.java:48)
+	at ✽.Quando eu clicar em uma &quot;SPEAKERS&quot;(br/com/rsinet/hub_bdd/functionalTests/EncontraProduto.feature:10)
+</error>
+  </testcase>
+  <testcase classname="| HP Roar Wireless Speaker | SPEAKERS |" name="E clicar em &quot;HP Roar Wireless Speaker&quot;" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase classname="| HP Roar Wireless Speaker | SPEAKERS |" name="Então será exibida uma página de descrição do &quot;HP Roar Wireless Speaker&quot;" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase classname="| MICE |" name="Dado que estou na pagina inicial &quot;&quot;" time="0"/>
+  <testcase classname="| MICE |" name="Quando eu clicar em uma &quot;MICE&quot;" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at br.com.rsinet.hub_bdd.stepDefinitions.EncontraProdutoTestSteps.eu_clicar_em_uma(EncontraProdutoTestSteps.java:48)
+	at ✽.Quando eu clicar em uma &quot;MICE&quot;(br/com/rsinet/hub_bdd/functionalTests/EncontraProduto.feature:21)
+</error>
+  </testcase>
+  <testcase classname="| MICE |" name="| MICE |" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at br.com.rsinet.hub_bdd.stepDefinitions.EncontraProdutoTestSteps.eu_clicar_em_uma(EncontraProdutoTestSteps.java:48)
+	at ✽.Quando eu clicar em uma &quot;MICE&quot;(br/com/rsinet/hub_bdd/functionalTests/EncontraProduto.feature:21)
+</error>
+  </testcase>
+  <testcase classname="| MICE |" name="E clicar no filtro por Scroller" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase classname="| MICE |" name="E clicar na opção TouchScroll" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase classname="| MICE |" name="E clicar no filtro por Cor" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase classname="| MICE |" name="E clicar na Cor Azul" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase classname="| MICE |" name="Então será apresentada uma mensagem na tela informando que o produto buscado não existe" time="0.004">
+    <skipped/>
+  </testcase>
+</testsuite>
